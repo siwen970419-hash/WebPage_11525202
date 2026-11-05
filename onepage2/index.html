@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
@@ -212,20 +212,37 @@
     /* Brew */
     .brew { padding: 118px 0; background: #fff; }
     .brew-grid { display: grid; grid-template-columns: .93fr 1.07fr; gap: clamp(45px, 8vw, 95px); align-items: center; }
-    .video-frame { position: relative; overflow: hidden; padding: 43px 0 30px; background: linear-gradient(90deg, var(--mist) 0 58%, #f5f9f9 58%); }
-    .video-frame::before { position: absolute; top: 43px; left: 0; width: 86px; height: 1px; background: var(--sky); box-shadow: 0 10px 0 var(--sky), 0 20px 0 var(--sky); content: ""; }
-    .video-frame iframe { position: relative; z-index: 1; display: block; width: 560px; max-width: 100%; height: auto; aspect-ratio: 16 / 9; margin: 0 auto; border: 0; background: var(--navy); box-shadow: var(--shadow); }
-    .pour-rings, .pour-rings::before, .pour-rings::after { position: absolute; border: 1px solid rgba(12,91,149,.36); border-radius: 50%; content: ""; }
-    .pour-rings { top: 85px; left: 50%; width: 192px; height: 192px; transform: translateX(-50%); }
-    .pour-rings::before { inset: 22px; }
-    .pour-rings::after { inset: 47px; }
-    .dripper { position: absolute; z-index: 1; top: 118px; left: 50%; width: 128px; height: 164px; transform: translateX(-50%); }
-    .dripper-top { width: 128px; height: 60px; border: 2px solid var(--blue); clip-path: polygon(0 0, 100% 0, 75% 100%, 25% 100%); background: rgba(255,255,255,.8); }
-    .dripper-top::after { position: absolute; top: 9px; left: 18px; width: 92px; height: 31px; border: 1px solid rgba(12,91,149,.55); border-radius: 50%; content: ""; }
-    .dripper-body { position: absolute; top: 58px; left: 32px; width: 64px; height: 80px; border: 2px solid var(--blue); border-top: 0; clip-path: polygon(12% 0, 88% 0, 100% 100%, 0 100%); background: rgba(255,255,255,.42); }
-    .dripper-base { position: absolute; bottom: 0; left: 15px; width: 98px; height: 21px; border: 2px solid var(--blue); border-radius: 50%; background: #fff; }
-    .brew-data { position: absolute; right: 25px; bottom: 22px; display: grid; justify-items: end; color: var(--blue); font-family: "Playfair Display", serif; font-size: 13px; font-weight: 700; letter-spacing: .05em; line-height: 1.5; }
-    .brew-data small { color: var(--muted); font-family: "Noto Sans TC", sans-serif; font-size: 10px; letter-spacing: .12em; }
+    .video-frame {
+      position: relative;
+      overflow: hidden;
+      padding: 40px 24px;
+      background: linear-gradient(90deg, var(--mist) 0 58%, #f5f9f9 58%);
+      border-radius: 4px;
+    }
+    .video-frame::before {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 86px;
+      height: 1px;
+      background: var(--sky);
+      box-shadow: 0 10px 0 var(--sky), 0 20px 0 var(--sky);
+      content: "";
+    }
+    .video-frame iframe {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      max-width: 560px;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      margin: 0 auto;
+      border: 0;
+      background: var(--navy);
+      box-shadow: var(--shadow);
+      border-radius: 2px;
+    }
     .brew-copy .section-copy { margin-bottom: 28px; }
     .brew-steps { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
     .brew-steps li { display: grid; grid-template-columns: 55px 1fr; gap: 12px; padding: 19px 0; border-bottom: 1px solid var(--line); }
@@ -301,8 +318,8 @@
       .section-heading .section-copy { margin-top: 15px; }
       .coffee-grid { grid-template-columns: 1fr; }
       .coffee-card, .coffee-card:nth-child(3) { grid-column: auto; min-height: 330px; }
-      .video-frame { padding: 36px 0 21px; min-height: 310px; }
-      .video-frame::before { top: 36px; width: 62px; }
+      .video-frame { padding: 24px 12px; }
+      .video-frame::before { top: 24px; width: 62px; }
       .subscribe-form { display: grid; gap: 7px; padding: 0; border: 0; }
       .subscribe-form input { width: 100%; min-height: 51px; border: 1px solid rgba(255,255,255,.45); }
       .subscribe-form .button { width: 100%; }
@@ -410,7 +427,7 @@
     <section class="brew" id="brew" aria-labelledby="brewTitle">
       <div class="wrap brew-grid">
         <div class="video-frame reveal">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/hMOYa4EBntI" title="藍天咖啡沖煮影片" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/hMOYa4EBntI" title="藍天咖啡沖煮影片" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="brew-copy reveal">
           <p class="eyebrow">A QUIET RITUAL</p>
@@ -518,4 +535,3 @@
   </script>
 </body>
 </html>
-
